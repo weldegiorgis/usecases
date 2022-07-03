@@ -1,0 +1,5 @@
+package com.nathy.app.entity;
+
+public class LoginDto {
+
+}

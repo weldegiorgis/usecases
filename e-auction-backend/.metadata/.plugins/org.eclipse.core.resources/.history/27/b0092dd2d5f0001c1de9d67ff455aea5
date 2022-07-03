@@ -1,0 +1,30 @@
+server.port=8787
+spring.data.mongodb.host=localhost
+spring.data.mongodb.port=27017
+spring.data.mongodb.database=e-auction
+spring.application.name=bid-producer-service
+#address.service.url=http://localhost:8383/e-auction/api/v1/address
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
+
+spring.zipkin.base-url=http://localhost:9411
+spring.profiles.active=local
+spring.profile=local
+spring.kafka.template.default-topic=bid-events
+spring.kafka.producer.bootstrap-servers=localhost:9092, localhost:9093, localhost:9094
+spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.IntegerSerializer
+spring.kafka.producer.value-serializer=org.apache.kafka.common.serialization.StringSerializer
+spring.kafka.producer.properties.acks=all
+spring.kafka.producer.properties.retries=20
+spring.kafka.admin.properties.bootstrap.servers=localhost:9092, localhost:9093, localhost:9094
+
+#---
+#spring.profiles=dev
+#spring.kafka.producer.bootstrap-servers=dev:9092 
+#spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.StringSerializer
+#spring.kafka.producer.value-serializer=org.apache.kafka.common.serialization.StringSerializer
+#
+#---
+#spring.profiles=prod
+#spring.kafka.producer.bootstrap-servers=prod:9092
+#spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.StringSerializer
+#spring.kafka.producer.value-serializer=org.apache.kafka.common.serialization.StringSerializer

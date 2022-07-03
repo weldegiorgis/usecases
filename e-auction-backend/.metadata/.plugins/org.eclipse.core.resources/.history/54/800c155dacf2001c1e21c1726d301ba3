@@ -1,0 +1,46 @@
+package com.nathy.app.service;
+
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
+import org.springframework.web.client.RestTemplate;
+
+
+import com.nathy.app.entity.AuthRequest;
+import com.nathy.app.entity.AuthResponse;
+import com.nathy.app.entity.value_objects.UserVO;
+
+@Service
+public class AuthService {
+	
+	Logger logger = LoggerFactory.getLogger(AuthService.class);
+
+    private final RestTemplate restTemplate;
+    private final JwtUtil jwt;
+
+    @Autowired
+    public AuthService(RestTemplate restTemplate,
+                       final JwtUtil jwt) {
+        this.restTemplate = restTemplate;
+        this.jwt = jwt;
+    }
+
+    public AuthResponse register(AuthRequest authRequest) {
+        //do validation if user already exists
+        authRequest.setPassword(BCrypt.hashpw(authRequest.getPassword(), BCrypt.gensalt()));
+        logger.info("Before");
+        UserVO userVO = restTemplate.postForObject("http://user-service/users", authRequest, UserVO.class);
+        logger.info("After Rest templaate");
+        Assert.notNull(userVO, "Failed to register user. Please try again later");
+
+        String accessToken = jwt.generate(userVO, "ACCESS");
+        String refreshToken = jwt.generate(userVO, "REFRESH");
+
+        return new AuthResponse(accessToken, refreshToken);
+
+    }
+}

@@ -1,0 +1,5 @@
+package com.nathy.app.config;
+
+public class BidEventConsumerConfig {
+
+}

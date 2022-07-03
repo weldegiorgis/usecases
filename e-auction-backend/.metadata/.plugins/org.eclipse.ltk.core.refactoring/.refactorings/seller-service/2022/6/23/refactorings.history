@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;AddressResponse.java&apos; to &apos;buyer-service/src/main/java/com.nathy.app.response&apos;&#x0D;&#x0A;- Original project: &apos;seller-service&apos;&#x0D;&#x0A;- Destination element: &apos;buyer-service/src/main/java/com.nathy.app.response&apos;&#x0D;&#x0A;- Original element: &apos;com.nathy.app.response.AddressResponse.java&apos;" description="Copy compilation unit" destination="=buyer-service/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.nathy.app.response" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.nathy.app.response{AddressResponse.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1654357740746" units="1" version="1.0"/>
+</session>

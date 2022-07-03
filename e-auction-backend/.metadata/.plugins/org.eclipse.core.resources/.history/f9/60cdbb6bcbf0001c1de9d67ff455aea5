@@ -1,0 +1,11 @@
+spring.application.name=address-service
+
+spring.cloud.config.discovery.enabled=true
+spring.cloud.config.discovery.service-id=config-server-service
+
+spring.cloud.config.profile=dev
+management.endpoints.web.exposure.inlude=refresh
+
+#spring.cloud.config.import-check.enabled=false
+#spring.cloud.config.uri=http://localhost:8888
+#spring.config.import=configserver

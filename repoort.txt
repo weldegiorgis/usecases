@@ -1,0 +1,4 @@
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic bid-events --from-beginning
+
+
+9bc480384edb4759aebe4f795a1c3f2b

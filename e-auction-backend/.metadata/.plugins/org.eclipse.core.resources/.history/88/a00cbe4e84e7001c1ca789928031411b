@@ -1,0 +1,29 @@
+package com.nathy.app.feignclients;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.nathy.app.request.CreateProductRequest;
+import com.nathy.app.response.BidResponse;
+import com.nathy.app.response.ProductResponse;
+ 
+//@FeignClient(url = "${product.service.url}", value = "product-feign-client")
+//@FeignClient(value = "product-service", path="/e-auction/api/v1/product")
+@FeignClient(value = "product-service")
+public interface ProductFeignClient {
+	@PostMapping
+	public ProductResponse createProduct(@RequestBody CreateProductRequest createProductRequest);
+	@DeleteMapping("/delete/{id}")
+	public String deleteProduct(@PathVariable("id") String id); 
+	@GetMapping("/getById/{id}")
+	public ProductResponse getById(@PathVariable("id") String id);
+//	@GetMapping("/getAllBids/{productId}")
+//	public List<BidResponse> getAllBidsByProductId(@PathVariable String productId);
+	 
+}

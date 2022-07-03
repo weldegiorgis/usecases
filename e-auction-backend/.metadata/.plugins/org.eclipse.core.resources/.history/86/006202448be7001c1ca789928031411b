@@ -1,0 +1,8 @@
+package com.nathy.app.feignclients;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(value = "api-gateway")
+public interface commonFeintClient {
+
+}

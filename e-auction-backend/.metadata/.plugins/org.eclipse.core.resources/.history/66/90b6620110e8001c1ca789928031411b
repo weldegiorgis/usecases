@@ -1,0 +1,10 @@
+server.port=8484
+spring.data.mongodb.host=localhost
+spring.data.mongodb.port=27017
+spring.data.mongodb.database=e-auction
+spring.application.name=seller-service
+address.service.url=http://localhost:8383/e-auction/api/v1/address
+product.service.url=http://localhost:8686/e-auction/api/v1/product
+bid.service.url=http://localhost:8787/e-auction/api/v1/bid
+
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka/

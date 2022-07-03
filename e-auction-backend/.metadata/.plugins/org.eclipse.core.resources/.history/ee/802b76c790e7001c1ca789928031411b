@@ -1,0 +1,20 @@
+package com.nathy.app.feignclients;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.nathy.app.response.BidResponse;
+
+//@FeignClient(url = "${bid.service.url}", value = "bid-feign-client")
+//@FeignClient(value = "bid-service", path="/e-auction/api/v1/bid")
+@FeignClient(value = "api-gateway")
+public interface BidFeignClient {
+	@GetMapping("/bid-service/e-auction/api/v1/bid/getAllBids/{productId}")
+	public List<BidResponse> getAllBidsByProductId(@PathVariable String productId);
+//	@GetMapping("/getAllBids")
+//	public List<BidResponse> getAllBidsByProductId();
+
+}

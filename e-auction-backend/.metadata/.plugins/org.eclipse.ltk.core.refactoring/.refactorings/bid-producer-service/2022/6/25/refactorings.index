@@ -1,0 +1,36 @@
+1655093422421	Move compilation unit
+1655093448530	Copy compilation unit
+1655094357991	Rename type 'CreateProductCommand'
+1655094727439	Rename type 'BidController'
+1655095059048	Move compilation unit
+1655095114526	Move compilation unit
+1655095477022	Move compilation unit
+1655095667212	Delete element
+1655095687905	Delete element
+1655095724523	Rename type 'ProductCreatedEvent'
+1655095746524	Rename type 'ProductEventsHandler'
+1655096013830	Rename type 'ProductServiceEventsErrorHandler'
+1655096055234	Rename type 'ProductRestModel'
+1655096148830	Delete element
+1655096153369	Delete element
+1655096514263	Delete element
+1655096545323	Rename type 'ProductProjection'
+1655096802301	Rename type 'GetProductsQuery'
+1655131831108	Rename type 'GetBidQuery'
+1655156376432	Rename package 'com.nathy.app'
+1655156408892	Rename package 'com.nathy.app.api.command.config'
+1655177262614	Copy compilation units
+1655177281400	Copy compilation unit
+1655178048779	Copy compilation unit
+1655178234309	Copy compilation unit
+1655220597911	Delete element
+1655222280403	Delete element
+1655224580428	Copy compilation unit
+1655224615798	Delete element
+1655227314523	Rename type 'BidController'
+1655243911404	Copy compilation unit
+1655251394873	Move compilation unit
+1655251544062	Rename package 'com.nathy.app.repository'
+1655251584100	Rename package 'com.nathy.app.response'
+1655251611371	Rename package 'com.nathy.app.service'
+1655263728083	Rename package 'com.nathy.app.exception'
